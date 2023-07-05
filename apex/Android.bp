@@ -23,7 +23,7 @@ apex_defaults {
     min_sdk_version: "current",
 
     binaries: [
-        "otbr-agent",
+        "ot-daemon",
         "ot-ctl",
     ],
     compile_multilib: "both",
