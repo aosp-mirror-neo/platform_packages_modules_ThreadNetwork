@@ -21,7 +21,7 @@ package {
 apex_defaults {
     name: "com.android.threadnetwork-defaults",
     min_sdk_version: "current",
-
+    systemserverclasspath_fragments: ["com.android.threadnetwork-systemserverclasspath-fragment"],
     binaries: [
         "ot-daemon",
         "ot-ctl",
@@ -67,4 +67,10 @@ apex_key {
 android_app_certificate {
     name: "com.android.threadnetwork.certificate",
     certificate: "com.android.threadnetwork",
+}
+
+systemserverclasspath_fragment {
+    name: "com.android.threadnetwork-systemserverclasspath-fragment",
+    standalone_contents: ["service-threadnetwork"],
+    apex_available: ["com.android.threadnetwork"],
 }
