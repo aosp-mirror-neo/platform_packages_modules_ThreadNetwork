@@ -15,7 +15,6 @@
 service ot-daemon /apex/com.android.threadnetwork/bin/ot-daemon -I thread-wpan threadnetwork_hal://binder?none
     disabled
     updatable
-    capabilities NET_RAW
     class main
     user thread_network
     group thread_network inet system
