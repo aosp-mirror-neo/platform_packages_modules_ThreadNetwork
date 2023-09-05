@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-service otbr-agent /apex/com.android.threadnetwork/bin/otbr-agent -I thread-wpan threadnetwork_hal://binder?none
+service ot-daemon /apex/com.android.threadnetwork/bin/ot-daemon -I thread-wpan threadnetwork_hal://binder?none
     disabled
     updatable
     capabilities NET_RAW
