@@ -21,14 +21,7 @@ package {
 apex_defaults {
     name: "com.android.threadnetwork-defaults",
     min_sdk_version: "current",
-
-    binaries: [
-        "ot-daemon",
-        "ot-ctl",
-    ],
-    compile_multilib: "both",
-    prebuilts: ["com.android.threadnetwork.init.rc"],
-
+    file_contexts: ":apex.test-file_contexts",
     manifest: "apex_manifest.json",
     key: "com.android.threadnetwork.key",
     certificate: ":com.android.threadnetwork.certificate",
@@ -40,22 +33,6 @@ apex {
     defaults: [
         "com.android.threadnetwork-defaults",
     ],
-}
-
-// threadnetwork apex with INT_MAX version code, to allow for upgrade/rollback testing.
-apex_test {
-    name: "test_com.android.threadnetwork",
-    defaults: ["com.android.threadnetwork-defaults"],
-    manifest: "test_apex_manifest.json",
-    file_contexts: ":com.android.threadnetwork-file_contexts",
-    installable: false,
-}
-
-prebuilt_etc {
-    name: "com.android.threadnetwork.init.rc",
-    src: "threadnetwork.rc",
-    filename: "init.rc",
-    installable: false,
 }
 
 apex_key {
