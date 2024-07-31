@@ -26,6 +26,7 @@ apex_defaults {
     key: "com.android.threadnetwork.key",
     certificate: ":com.android.threadnetwork.certificate",
     compressible: true,
+    updatable: false,
 }
 
 apex {
