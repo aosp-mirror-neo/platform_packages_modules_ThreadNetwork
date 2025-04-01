@@ -25,7 +25,7 @@ apex_defaults {
     manifest: "apex_manifest.json",
     key: "com.android.threadnetwork.key",
     certificate: ":com.android.threadnetwork.certificate",
-    compressible: true,
+    compressible: false, // do not compress non-updatable apex
     updatable: false,
 }
 
